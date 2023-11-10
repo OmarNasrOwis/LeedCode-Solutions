@@ -4,7 +4,6 @@ https://leetcode.com/problems/two-sum/description/
 */
 
 //solution
-
 /**
  * @param {number[]} nums
  * @param {number} target
