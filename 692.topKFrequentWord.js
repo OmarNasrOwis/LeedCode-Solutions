@@ -1,6 +1,6 @@
 /* 
 problem link:
-https://leetcode.com/problems/merge-two-sorted-lists/description/
+https://leetcode.com/problems/top-k-frequent-words/
  */
 
 function topK(words, k) {
