@@ -18,6 +18,7 @@ function topK(words, k) {
   for (let key of map.keys()) {
     arr.push(key);
   }
+  arr.sort();
   arr.sort((a, b) => map.get(b) - map.get(a));
   return arr.slice(0, k);
 }
