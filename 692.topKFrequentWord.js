@@ -5,20 +5,19 @@ https://leetcode.com/problems/array-prototype-last/description/
 
 //can create frequency counter using object
 function topK(words, k) {
-  let frequencyObj = {};
-  let result = [];
-  for (let word of words) {
-    frequencyObj[word] = (frequencyObj[word] || 0) + 1;
-  }
-  for (let key in frequencyObj) {
-    if (frequencyObj[key] == k) {
-        result.push(key);
+  const map = new Map();
+  for (const word of words) {
+    if (map.has(word)) {
+      map.set(word, map.get(word) + 1);
+    } else {
+      map.set(word, 1);
     }
   }
-  return result;
+
+  let arr = new Array();
+  for (let key of map.keys()) {
+    arr.push(key);
+  }
+  arr.sort((a, b) => map.get(b) - map.get(a));
+  return arr.slice(0, k);
 }
-
-let  words= ["the","day","is","sunny","the","the","the","sunny","is","is"],
-  k = 4;
-
-console.log(topK(words,k));
