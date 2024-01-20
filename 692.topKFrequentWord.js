@@ -1,6 +1,6 @@
 /* 
 problem link:
-https://leetcode.com/problems/array-prototype-last/description/
+https://leetcode.com/problems/top-k-frequent-words/
  */
 
 //can create frequency counter using object
