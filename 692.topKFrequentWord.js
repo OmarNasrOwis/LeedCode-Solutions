@@ -3,7 +3,6 @@ problem link:
 https://leetcode.com/problems/top-k-frequent-words/
  */
 
-//can create frequency counter using object
 function topK(words, k) {
   const map = new Map();
   for (const word of words) {
